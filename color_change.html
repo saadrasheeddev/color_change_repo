@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+    <script>
+        function changeBackground() {
+            var color = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }
+
+        document.addEventListener("touchend", changeBackground);
+        document.addEventListener("keyup", function(event) {
+            if (event.code === "Space") {
+                changeBackground();
+            }
+        });
+    </script>
+</head>
+<body>
+    <button onclick="changeBackground()">Change Color</button>
+</body>
+</html>
